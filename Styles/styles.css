@@ -1,9 +1,22 @@
 @import url(./normalize.css);
 
+@font-face {
+  font-family: "centurygothic";
+  src: url("/fonts/century_gothic_bold-webfont.woff2") format("woff2"),
+    url("/fonts/century_gothic_bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "centurygothic";
+  src: url("/fonts/century_gothic_regular-webfont.woff2") format("woff2"),
+    url("/fonts/century_gothic_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* --------------- General configuration --------------- */
 :root {
-  /* --color-background: #dee4f0; */
-  --color-background: white;
+  --color-background: #dee4f0;
   --color-items-background: #f2f3f7;
   --btn-border-radius: 4px;
   --color-shadow: #d9dde9;
@@ -33,9 +46,11 @@ h1,
 h2,
 h3 {
   margin: 0;
+  font-family: "centurygothic", Arial, Helvetica, sans-serif;
 }
 
 a {
+  font-family: "centurygothic", Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: inherit;
 }
@@ -269,12 +284,48 @@ a {
 .badge {
   height: 24px;
   width: 126px;
-  font-size: 1.4rem;
-  text-transform: capitalize;
   padding: 0.8rem;
 }
 .badge__text {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+}
+/* --------------- calendar Body --------------- */
+.square {
+  background-color: var(--color-background);
+  height: 120px;
+  border: 0.5px solid #cbd0e3;
+  transition: 0.1s;
+}
+.square.number {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+.square .badge {
+  margin: 2.8rem auto;
+}
+.today + .badge {
+  margin: 2rem auto;
+}
+.square .today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: var(--color-items-background);
+  border-radius: 100%;
+  margin: 0 auto;
+}
+.body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.square:hover {
+  transform: scale(1.1);
+  border-radius: 10px;
 }
