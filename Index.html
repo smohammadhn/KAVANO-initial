@@ -12,64 +12,192 @@
     <link rel="stylesheet" href="./Styles/styles.css" />
   </head>
   <body>
-    <!-- calendar body -->
-    <section class="body">
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-
-      <div class="square number">1</div>
-      <div class="square number">2</div>
-      <div class="square number">3</div>
-      <div class="square number">4</div>
-      <div class="square number">5</div>
-      <div class="square number">6</div>
-      <div class="square number">7</div>
-      <div class="square number">8</div>
-      <div class="square number">9</div>
-      <div class="square number">10</div>
-      <div class="square number">11</div>
-      <div class="square number">12</div>
-      <div class="square number">13</div>
-      <div class="square number">14</div>
-
-      <div class="square number number-badge">
-        <p>15</p>
-        <div class="badge">
-          <p class="badge__text">Buy Anniversary gift</p>
+    <!-- Main rectangle -->
+    <div class="main-rect">
+      <!-- tasks section -->
+      <section class="tasks-section">
+        <!-- profile -->
+        <div class="profile">
+          <img
+            class="profile__photo"
+            src="./Images/magnifier.png"
+            alt="profile picture"
+          />
+          <p class="profile__greetings">Good Morning,</p>
+          <p class="profile__name">S.Mohammad!</p>
         </div>
-      </div>
 
-      <div class="square number">16</div>
-      <div class="square number">17</div>
+        <!-- tasks card -->
+        <div class="card add-task-card">
+          <div class="btn add-task">
+            <img
+              class="add-task__image"
+              src="./Images/plus-sign.png"
+              alt="plus sign"
+            />
+            <p>Add a Task</p>
+          </div>
 
-      <div class="square number number-badge">
-        <p class="today">18</p>
-        <div class="badge">
-          <p class="badge__text">Book return ticket</p>
+          <div class="task-item one-row">
+            <input type="radio" id="task1" name="task-item" value="task1" />
+            <label for="task1">Wireframe for contact page</label>
+          </div>
+          <div class="task-item two-rows">
+            <input type="radio" id="task2" name="task-item" value="task2" />
+            <label for="task2">Book return ticket</label>
+            <p>Today</p>
+          </div>
+          <div class="task-item two-rows important">
+            <input type="radio" id="task3" name="task-item" value="task3" />
+            <label for="task3">Buy anniversary gift</label>
+            <p>3 days ago</p>
+          </div>
+          <div class="task-item one-row">
+            <input type="radio" id="task4" name="task-item" value="task4" />
+            <label for="task4">Pay electricity bill</label>
+          </div>
+          <div class="task-item two-rows">
+            <input type="radio" id="task5" name="task-item" value="task5" />
+            <label for="task5">meet chris in the conference</label>
+            <p>tomorrow</p>
+          </div>
         </div>
-      </div>
-      <div class="square number number-badge">
-        <p>19</p>
-        <div class="badge">
-          <p class="badge__text">Meet chris in the conference</p>
+
+        <!-- completed button -->
+        <div class="btn completed">
+          <p>Completed</p>
+          <img
+            class="completed__chevron"
+            src="./Images/chevron.png"
+            alt="chevron"
+          />
         </div>
-      </div>
+      </section>
 
-      <div class="square number">20</div>
-      <div class="square number">21</div>
-      <div class="square number">22</div>
-      <div class="square number">23</div>
-      <div class="square number">24</div>
-      <div class="square number">25</div>
-      <div class="square number">26</div>
-      <div class="square number">27</div>
-      <div class="square number">28</div>
-      <div class="square number">29</div>
-      <div class="square number">30</div>
+      <!-- calendar top section -->
+      <section class="caldendar-top">
+        <header class="calendar__header">
+          <h2 class="main-date">November 2019</h2>
+          <!-- mini date -->
+          <div class="mini-date">
+            <h3 class="date__title">Today</h3>
+            <p class="date__subtitle">18, Mon</p>
+          </div>
+          <!-- search input -->
+          <div class="btn search">
+            <img
+              class="search__image"
+              src="./Images/magnifier.png"
+              alt="magnifier"
+            />
+            <input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Search"
+              maxlength="40"
+            />
+          </div>
+        </header>
 
-    </section>
+        <!-- Day-week-month ribbon -->
+        <div class="dwm-ribbon">
+          <img
+            class="completed__chevron left"
+            src="./Images/chevron.png"
+            alt="chevron"
+          />
+
+          <!-- small button -->
+          <a class="small-button" href="#">
+            <p>Day</p>
+          </a>
+          <!-- small button -->
+          <a class="small-button" href="#">
+            <p>Week</p>
+          </a>
+          <!-- small button + orange -->
+          <a class="small-button accent" href="#">
+            <p>Month</p>
+          </a>
+
+          <img
+            class="completed__chevron right"
+            src="./Images/chevron.png"
+            alt="chevron"
+          />
+        </div>
+
+        <!-- days-of-the-week ribbon -->
+        <div class="days-ribbon">
+          <p>Sat</p>
+          <p>Sun</p>
+          <p>Mon</p>
+          <p>Tue</p>
+          <p>Wed</p>
+          <p>Thu</p>
+          <p>Fri</p>
+        </div>
+      </section>
+
+      <!-- calendar body -->
+      <section class="body">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+
+        <div class="square number">1</div>
+        <div class="square number">2</div>
+        <div class="square number">3</div>
+        <div class="square number">4</div>
+        <div class="square number">5</div>
+        <div class="square number">6</div>
+        <div class="square number">7</div>
+        <div class="square number">8</div>
+        <div class="square number">9</div>
+        <div class="square number">10</div>
+        <div class="square number">11</div>
+        <div class="square number">12</div>
+        <div class="square number">13</div>
+        <div class="square number">14</div>
+
+        <div class="square number number-badge">
+          <p>15</p>
+          <div class="badge">
+            <p class="badge__text">Buy Anniversary gift</p>
+          </div>
+        </div>
+
+        <div class="square number">16</div>
+        <div class="square number">17</div>
+
+        <div class="square number number-badge">
+          <p class="today">18</p>
+          <div class="badge">
+            <p class="badge__text">Book return ticket</p>
+          </div>
+        </div>
+        <div class="square number number-badge">
+          <p>19</p>
+          <div class="badge">
+            <p class="badge__text">Meet chris in the conference</p>
+          </div>
+        </div>
+
+        <div class="square number">20</div>
+        <div class="square number">21</div>
+        <div class="square number">22</div>
+        <div class="square number">23</div>
+        <div class="square number">24</div>
+        <div class="square number">25</div>
+        <div class="square number">26</div>
+        <div class="square number">27</div>
+        <div class="square number">28</div>
+        <div class="square number">29</div>
+        <div class="square number">30</div>
+      </section>
+    </div>
   </body>
 </html>
